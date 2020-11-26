@@ -1,7 +1,7 @@
 import random
 import pygame
 from pygame.math import Vector2
-
+import LED_display as LMD
 import threading
 
 def LED_init():
@@ -189,6 +189,6 @@ def main():
 
 
 if __name__ == '__main__':
-       #LED_init()
+       LED_init()
        main()
        pygame.quit()
