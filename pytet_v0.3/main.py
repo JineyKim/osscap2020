@@ -66,7 +66,7 @@ def initSetOfBlockArrays():
     return setOfBlockArrays
     
 if __name__ == "__main__":
-    #LED_init()
+    LED_init()
     setOfBlockArrays = initSetOfBlockArrays()
 
     Tetris.init(setOfBlockArrays)
