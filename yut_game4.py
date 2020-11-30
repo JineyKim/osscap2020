@@ -203,7 +203,7 @@ endgameB = [
     ]
 top = 15
 left = 0
-iScreen = Matrix(arrayScreen)
+iScreen = Matrix(arrayboard)
 oScreen = Matrix(iScreen)
 yutBlk = Matrix(y1)
 yuttop = 15
