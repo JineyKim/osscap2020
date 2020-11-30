@@ -116,8 +116,8 @@ hammerstyle = hammerledup
 
 def draw_matrix(m):
     array = m.get_array()
-    for y in range(32):
-        for x in range(16):
+    for y in range(16):
+        for x in range(32):
             if array[x][y] == 0:
                 LMD.set_pixel(y, x, 0)
             elif array[x][y] == 1:
