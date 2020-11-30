@@ -749,7 +749,7 @@ def main_game():
           oScreen.paste(aattBlk, atop, aleft)
     
           drawmatrix(oScreen); print()
-          refresh()
+          
           input("A팀의 턴입니다!\n엔터키를 눌러 윷을 던져주세요.")
           n1, k1 = throw()
           n += n1
