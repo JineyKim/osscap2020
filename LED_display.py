@@ -31,7 +31,7 @@ GPIO.setup(c_pin, GPIO.OUT)
 GPIO.setup(latch_pin, GPIO.OUT)
 GPIO.setup(oe_pin, GPIO.OUT)
 
-screen = [[0 for x in range(16)] for x in range(32)]
+screen = [[0 for x in range(32)] for x in range(16)]
 
 def clock():
     GPIO.output(clock_pin, 1)
