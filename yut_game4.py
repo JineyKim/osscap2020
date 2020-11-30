@@ -121,7 +121,15 @@ y6 = [[1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0],
       [1,2,1,0,1,2,1,0,1,2,1,0,1,2,1,0],
       [1,2,1,0,1,2,1,0,1,2,1,0,1,2,1,0],
       [1,1,1,0,1,1,1,0,1,1,1,0,1,1,1,0]]
-
+#A
+ater = [[1]]
+atop = 20
+bleft = 1
+#b턴
+bter = [[4]]
+btop = 20
+btop = 1
+ter = ater
 #endgame A
 endgameA = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -455,37 +463,37 @@ def throw():
         print(list(j.keys())[0] + "!")
         if (list(j.keys())[0] == '도'):
             yutBlk = Matrix(y1)
-            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
             yuttBlk = yuttBlk+yutBlk
             oScreen.paste(yuttBlk, yuttop, turleft)
             drawmatrix(oScreen); print()
         elif (list(j.keys())[0] == '개'):
             yutBlk = Matrix(y3)
-            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
             yuttBlk = yuttBlk+yutBlk
             oScreen.paste(yuttBlk, yuttop, turleft)
             drawmatrix(oScreen); print()
         elif (list(j.keys())[0] == '걸'):
             yutBlk = Matrix(y4)
-            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
             yuttBlk = yuttBlk+yutBlk
             oScreen.paste(yuttBlk, yuttop, turleft)
             drawmatrix(oScreen); print()
         elif (list(j.keys())[0] == '윷'):
             yutBlk = Matrix(y5)
-            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
             yuttBlk = yuttBlk+yutBlk
             oScreen.paste(yuttBlk, yuttop, turleft)
             drawmatrix(oScreen); print()
         elif (list(j.keys())[0] == '모'):
             yutBlk = Matrix(y6)
-            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
             yuttBlk = yuttBlk+yutBlk
             oScreen.paste(yuttBlk, yuttop, turleft)
             drawmatrix(oScreen); print()
         elif (j == {'빽도': -1}):
             yutBlk = Matrix(y2)
-            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+            yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
             yuttBlk = yuttBlk+yutBlk
             oScreen.paste(yuttBlk, yuttop, turleft)
             drawmatrix(oScreen); print()
@@ -496,37 +504,37 @@ def throw():
     print(list(j.keys())[0] + "!")
     if (list(j.keys())[0] == '도'):
         yutBlk = Matrix(y1)
-        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
         yuttBlk = yuttBlk+yutBlk
         oScreen.paste(yuttBlk, yuttop, turleft)
         drawmatrix(oScreen); print()
     elif (list(j.keys())[0] == '개'):
         yutBlk = Matrix(y3)
-        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
         yuttBlk = yuttBlk+yutBlk
         oScreen.paste(yuttBlk, yuttop, turleft)
         drawmatrix(oScreen); print()
     elif (list(j.keys())[0] == '걸'):
         yutBlk = Matrix(y4)
-        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
         yuttBlk = yuttBlk+yutBlk
         oScreen.paste(yuttBlk, yuttop, turleft)
         drawmatrix(oScreen); print()
     elif (list(j.keys())[0] == '윷'):
         yutBlk = Matrix(y5)
-        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
         yuttBlk = yuttBlk+yutBlk
         oScreen.paste(yuttBlk, yuttop, turleft)
         drawmatrix(oScreen); print()
     elif (list(j.keys())[0] == '모'):
         yutBlk = Matrix(y6)
-        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
         yuttBlk = yuttBlk+yutBlk
         oScreen.paste(yuttBlk, yuttop, turleft)
         drawmatrix(oScreen); print()
     elif (j == {'빽도': -1}):
         yutBlk = Matrix(y2)
-        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft.get_dx())
+        yuttBlk = iScreen.clip(yuttop, turleft, yuttop+yutBlk.get_dy(), turleft+yutBlk.get_dx())
         yuttBlk = yuttBlk+yutBlk
         oScreen.paste(yuttBlk, yuttop, turleft)
         drawmatrix(oScreen); print()
@@ -731,7 +739,12 @@ def main_game():
     B1 = [[10, 10], [10, 10], [10, 10], [10, 10]]
     n, k = [],[]
     while True:
-          oScreen[20][1] = 1
+          ter = ater
+          aBlk = Matrix(ter)
+          aaBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
+          aattBlk = aattBlk+atBlk
+          oScreen.paste(aattBlk, yuttop, turleft)
+    
           drawmatrix(oScreen); print()
           input("A팀의 턴입니다!\n엔터키를 눌러 윷을 던져주세요.")
           n1, k1 = throw()
@@ -784,7 +797,11 @@ def main_game():
                     members[usernameB] = (passwdB, triesB + Games, winsB + WB)
 
                     return print("A팀의 승리입니다!")
-          oScreen[20][1] = 4
+          ter = ater
+          aBlk = Matrix(ter)
+          aaBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
+          aattBlk = aattBlk+atBlk
+          oScreen.paste(aattBlk, yuttop, turleft)
           drawmatrix(oScreen); print()
           input("B팀의 턴입니다!\n엔터키를 눌러 윷을 던져주세요.")
           n1, k1 = throw()
