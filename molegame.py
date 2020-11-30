@@ -129,13 +129,15 @@ def draw_matrix(m):
             elif array[x][y] == 4:
                 LMD.set_pixel(y, x, 4)
             elif array[x][y] == 5:
-                LMD.set_pixel(y, x, 1)
+                LMD.set_pixel(y, x, 5)
             elif array[x][y] == 6:
                 LMD.set_pixel(y, x, 6)
             elif array[x][y] == 7:
                 LMD.set_pixel(y, x, 7)
             elif array[x][y] == 9:
                 LMD.set_pixel(y, x, 1)
+            elif array[x][y] == 12:
+                LMD.set_pixel(y, x, 5)
             else:
                 continue
         print()
