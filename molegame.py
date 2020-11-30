@@ -170,8 +170,9 @@ def mole():
 
 #충돌
 def bre(m, score1):
-    for y in range(len(m[0])):
-        for x in range(len(m)):
+    array = m.get_array()
+    for y in range(32):
+        for x in range(16):
             if (m[x][y] == 9):
                 score1 += 1
                 return score1
