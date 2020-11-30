@@ -1,7 +1,7 @@
 import pygame
 import sys
 import math
-#import LED_display as LMD
+import LED_display as LMD
 
 class Ball:
     def __init__(self, x, y, width, height, vx, vy, colour):
@@ -120,5 +120,5 @@ class Pong(object):
         pygame.display.update()
 
 if __name__ == "__main__":
-    #LED_init()
+    LED_init()
     Pong().play()
