@@ -11,11 +11,11 @@ import threading
 #게임창 옵션 설정, pygame관련 설정들
 WINDOWWIDTH = 480
 WINBOWHEIGHT = 800
-screen = pygame.display.set_mode((500, 500))
+#screen = pygame.display.set_mode((500, 500))
 done = False
-title = "Mole game"
-pygame.display.set_caption(title) #게임 이름
-myFont = pygame.font.Font(None, 30)
+#title = "Mole game"
+#pygame.display.set_caption(title) #게임 이름
+
 clock = pygame.time.Clock()
 #기본 설정
 color = (0,0,0)
@@ -158,7 +158,7 @@ hammerleft =13
 hammerstyle = hammerledup
 #text_level = myFont.render("Level %d" %level, True, BLUE)
 #text_s = myFont.render("score %d" %score, True, BLUE)
-end_message = myFont.render("Game over", True, BLUE)
+#end_message = myFont.render("Game over", True, BLUE)
 #각종 입력 감지           
           
 #pygame.event.get() 각종 입력을 실시간으로 받을수있게함
