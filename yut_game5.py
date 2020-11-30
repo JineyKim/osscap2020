@@ -227,8 +227,7 @@ def drawmatrix(m):
     array = m.get_array()
     for x in range(32):
         for y in range(16): #m.get_dx()
-            print(x,end=' ')
-            print(y)
+            
             if array[x][y] == 0:
                 LMD.set_pixel(y, x, 0)
             elif array[x][y] == 1:
