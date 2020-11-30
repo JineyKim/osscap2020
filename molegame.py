@@ -11,10 +11,10 @@ import threading
 #게임창 옵션 설정, pygame관련 설정들
 WINDOWWIDTH = 480
 WINBOWHEIGHT = 800
-#screen = pygame.display.set_mode((500, 500))
+screen = pygame.display.set_mode((500, 500))
 done = False
-#title = "Mole game"
-#pygame.display.set_caption(title) #게임 이름
+title = "Mole game"
+pygame.display.set_caption(title) #게임 이름
 
 clock = pygame.time.Clock()
 #기본 설정
