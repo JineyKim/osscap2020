@@ -2,6 +2,7 @@ from matrix import *
 import LED_display as LMD
 import threading
 
+
 def LED_init():
     thread=threading.Thread(target=LMD.main, args=())
     thread.setDaemon(True)
@@ -211,24 +212,26 @@ turleft = 0
 #led그리
 def drawmatrix(m):
     array = m.get_array()
-    for x in range(len(array)):
-        for y in range(len(array[0])):
+    for x in range(32):
+        for y in range(16): #m.get_dx()
+            print(x,end=' ')
+            print(y)
             if array[x][y] == 0:
-                LMD.set_pixel(x, y, 0)
+                LMD.set_pixel(y, x, 0)
             elif array[x][y] == 1:
-                LMD.set_pixel(x, y, 1)
+                LMD.set_pixel(y, x, 1)
             elif array[x][y] == 2:
-                LMD.set_pixel(x, y, 2)
+                LMD.set_pixel(y, x, 2)
             elif array[x][y] == 3:
-                LMD.set_pixel(x, y, 3)
+                LMD.set_pixel(y, x, 3)
             elif array[x][y] == 4:
-                LMD.set_pixel(x, y, 4)
+                LMD.set_pixel(y, x, 4)
             elif array[x][y] == 5:
-                LMD.set_pixel(x, y, 5)
+                LMD.set_pixel(y, x, 5)
             elif array[x][y] == 6:
-                LMD.set_pixel(x, y, 6)
+                LMD.set_pixel(y, x, 6)
             elif array[x][y] == 7:
-                LMD.set_pixel(x, y, 7)
+                LMD.set_pixel(y,x, 7)
             else:
                 continue
         print()
@@ -748,9 +751,8 @@ def main_game():
           aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
           aattBlk = aattBlk+aBlk
           oScreen.paste(aattBlk, atop, aleft)
-    
           drawmatrix(oScreen); print()
-          
+        
           input("A팀의 턴입니다!\n엔터키를 눌러 윷을 던져주세요.")
           n1, k1 = throw()
           n += n1
