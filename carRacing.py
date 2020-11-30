@@ -20,8 +20,8 @@ def drive(handle):
         tk=8
     elif handle==12:
         ta=0
-        tb=0
-        tc=5
+        tb=3
+        tc=6
         td=6
         te=7
         tf=7
@@ -417,7 +417,10 @@ matrix=[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
         [8,8,8,8,8,8,8,8,0,0,0,0,0,7,0,7,7,0,7,0,0,0,0,0,8,8,8,8,8,8,8,8],
         [8,8,8,8,8,8,8,8,0,0,0,0,0,0,7,7,7,7,0,0,0,0,0,0,8,8,8,8,8,8,8,8],]
 
-roadMap=[8,8,8,8,7,7,7,7,6,6,6,6,5,5,5,5,4,4,4,4,3,3,3,3,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8]
+roadMap=[8,8,8,8,7,7,6,6,5,5,4,4,3,3,2,2,2,2,
+         2,2,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8,8,
+         8,8,8,8,9,9,10,10,11,11,12,12,12,12,
+         12,12,12,12,11,11,10,10,9,9,8,8,8,8]
 tt=0
 
 pygame.init()
@@ -450,24 +453,24 @@ while True:
 
     screen.fill(BLACK)
 
-    if roadMap[tt//5]>handle:
+    if roadMap[tt]>handle:
         if handle<12:
             handle+=1
-    elif roadMap[tt//5]<handle:
+    elif roadMap[tt]<handle:
         if handle>1:
             handle-=1
 
     if event.type==pygame.KEYDOWN:
         if event.key==pygame.K_RIGHT:
-            if handle>1:
+            if handle>2:
                 handle-=1
         elif event.key==pygame.K_LEFT:
-            if handle<12:
+            if handle<11:
                 handle+=1
     
     drive(handle)
     tt+=1
-    if tt>250:
+    if tt>63:
         tt=0
     pygame.display.update()
     clock.tick(15)
