@@ -742,6 +742,7 @@ def main_game():
     B1 = [[10, 10], [10, 10], [10, 10], [10, 10]]
     n, k = [],[]
     while True:
+          LMD.set_pixel(1, 1, 3)
           ter = ater
           aBlk = Matrix(ter)
           aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
