@@ -745,7 +745,7 @@ def main_game():
           ter = ater
           aBlk = Matrix(ter)
           aaBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
-          aattBlk = aattBlk+atBlk
+          aattBlk = aattBlk+aaBlk
           oScreen.paste(aattBlk, yuttop, turleft)
     
           drawmatrix(oScreen); print()
@@ -803,7 +803,7 @@ def main_game():
           ter = ater
           aBlk = Matrix(ter)
           aaBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
-          aattBlk = aattBlk+atBlk
+          aattBlk = aattBlk+aaBlk
           oScreen.paste(aattBlk, yuttop, turleft)
           drawmatrix(oScreen); print()
           input("B팀의 턴입니다!\n엔터키를 눌러 윷을 던져주세요.")
