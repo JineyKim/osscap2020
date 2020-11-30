@@ -118,23 +118,23 @@ def draw_matrix(m):
     array = m.get_array()
     for y in range(32):
         for x in range(16):
-            if m[x][y] == 0:
+            if array[x][y] == 0:
                 LMD.set_pixel(y, x, 0)
-            elif m[x][y] == 1:
+            elif array[x][y] == 1:
                 LMD.set_pixel(y, x, 1)
-            elif m[x][y] == 2:
+            elif array[x][y] == 2:
                 LMD.set_pixel(y, x, 2)
-            elif m[x][y] == 3:
+            elif array[x][y] == 3:
                 LMD.set_pixel(y, x, 3)
-            elif m[x][y] == 4:
+            elif array[x][y] == 4:
                 LMD.set_pixel(y, x, 4)
-            elif m[x][y] == 5:
+            elif array[x][y] == 5:
                 LMD.set_pixel(y, x, 1)
-            elif m[x][y] == 6:
+            elif array[x][y] == 6:
                 LMD.set_pixel(y, x, 6)
-            elif m[x][y] == 7:
+            elif array[x][y] == 7:
                 LMD.set_pixel(y, x, 7)
-            elif m[x][y] == 9:
+            elif array[x][y] == 9:
                 LMD.set_pixel(y, x, 1)
             else:
                 continue
