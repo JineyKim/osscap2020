@@ -744,7 +744,7 @@ def main_game():
     while True:
           ter = ater
           aBlk = Matrix(ter)
-          aaBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
+          aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
           aattBlk = aattBlk+aaBlk
           oScreen.paste(aattBlk, yuttop, turleft)
     
@@ -802,7 +802,7 @@ def main_game():
                     return print("A팀의 승리입니다!")
           ter = ater
           aBlk = Matrix(ter)
-          aaBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
+          aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
           aattBlk = aattBlk+aaBlk
           oScreen.paste(aattBlk, yuttop, turleft)
           drawmatrix(oScreen); print()
