@@ -1,8 +1,19 @@
+from matrix import *
 import pygame
-import time
 import random
+import time
+import sys
+import LED_display as LMD
+import threading
+
  
-pygame.init()
+##pygame.init()
+def LED_init():
+    thread=threading.Thread(target=LMD.main, args=())
+    thread.setDaemon(True)
+    thread.start()
+    return
+LED_init()
  
 white = (255, 255, 255)
 yellow = (255, 255, 102)
@@ -21,25 +32,21 @@ clock = pygame.time.Clock()
  
 snake_block = 10
 snake_speed = 10
+## 
+##font_style = pygame.font.SysFont("bahnschrift", 25)
+##score_font = pygame.font.SysFont("comicsansms", 35)
  
-font_style = pygame.font.SysFont("bahnschrift", 25)
-score_font = pygame.font.SysFont("comicsansms", 35)
  
- 
-def Your_score(score):
-    value = score_font.render("Your Score: " + str(score), True, yellow)
-    dis.blit(value, [0, 0])
- 
+##def Your_score(score):
+##    value = score_font.render("Your Score: " + str(score), True, yellow)
+##    dis.blit(value, [0, 0])
+## 
  
  
 def our_snake(snake_block, snake_list):
     for x in snake_list:
-        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
- 
- 
-def message(msg, color):
-    mesg = font_style.render(msg, True, color)
-    dis.blit(mesg, [dis_width / 6, dis_height / 3])
+##        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
+        LMD.set_pixel(x[0],x[1],6)
  
  
 def gameLoop():
@@ -55,8 +62,8 @@ def gameLoop():
     snake_List = []
     Length_of_snake = 1
  
-    foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
-    foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+    foodx = round(random.randrange(0, dis_width - snake_block)) 
+    foody = round(random.randrange(0, dis_height - snake_block)) 
  
     while not game_over:
  
@@ -95,8 +102,9 @@ def gameLoop():
             game_close = True
         x1 += x1_change
         y1 += y1_change
-        dis.fill(blue)
-        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+##        dis.fill(blue)
+##        pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
+        LMD.set_pixel(foody,foodx,1)
         snake_Head = []
         snake_Head.append(x1)
         snake_Head.append(y1)
@@ -109,13 +117,13 @@ def gameLoop():
                 game_close = True
  
         our_snake(snake_block, snake_List)
-        Your_score(Length_of_snake - 1)
+##        Your_score(Length_of_snake - 1)
  
-        pygame.display.update()
+##        pygame.display.update()
  
         if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
-            foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+            foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) 
+            foody = round(random.randrange(0, dis_height - snake_block) / 10.0)
             Length_of_snake += 1
  
         clock.tick(snake_speed)
