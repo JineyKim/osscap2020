@@ -625,63 +625,63 @@ def origin_board():#깨끗한 놀이판, show_board에서만 사용한다.
 
 def Acheck(top, left, acheck):
     if (acheck ==1):
-                    ah1top = top
-                    ah1left = left
-                    ah1Blk= Matrix(ah1)
-                    ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                    ah11Blk = ah11Blk+ah1Blk
-                    oScreen.paste(ah11Blk, ah1top, ah1left)
-                elif (acheck ==2):
-                    ah2top = top
-                    ah2left = left
-                    ah2Blk= Matrix(ah2)
-                    ah22Blk = iScreen.clip(ah2top, ah2left, ah2top+ah2Blk.get_dy(), ah2left+ah2Blk.get_dx())
-                    ah22Blk = ah22Blk+ah2Blk
-                    oScreen.paste(ah22Blk, ah2top, ah2left)
-                 elif (acheck ==3):
-                    ah3top = top
-                    ah3left = left
-                    ah3Blk= Matrix(ah3)
-                    ah33Blk = iScreen.clip(ah3top, ah3left, ah3top+ah3Blk.get_dy(), ah3left+ah3Blk.get_dx())
-                    ah33Blk = ah33Blk+ah3Blk
-                    oScreen.paste(ah33Blk, ah3top, ah3left)
-                 elif (acheck ==4):
-                    ah4top = top
-                    ah4left = left
-                    ah4Blk= Matrix(ah4)
-                    ah44Blk = iScreen.clip(ah4top, ah4left, ah4top+ah4Blk.get_dy(), ah4left+ah4Blk.get_dx())
-                    ah44Blk = ah44Blk+ah4Blk
-                    oScreen.paste(ah44Blk, ah4top, ah4left)
+        ah1top = top
+        ah1left = left
+        ah1Blk= Matrix(ah1)
+        ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
+        ah11Blk = ah11Blk+ah1Blk
+        oScreen.paste(ah11Blk, ah1top, ah1left)
+    elif (acheck ==2):
+        ah2top = top
+        ah2left = left
+        ah2Blk= Matrix(ah2)
+        ah22Blk = iScreen.clip(ah2top, ah2left, ah2top+ah2Blk.get_dy(), ah2left+ah2Blk.get_dx())
+        ah22Blk = ah22Blk+ah2Blk
+        oScreen.paste(ah22Blk, ah2top, ah2left)
+    elif (acheck ==3):
+        ah3top = top
+        ah3left = left
+        ah3Blk= Matrix(ah3)
+        ah33Blk = iScreen.clip(ah3top, ah3left, ah3top+ah3Blk.get_dy(), ah3left+ah3Blk.get_dx())
+        ah33Blk = ah33Blk+ah3Blk
+        oScreen.paste(ah33Blk, ah3top, ah3left)
+    elif (acheck ==4):
+        ah4top = top
+        ah4left = left
+        ah4Blk= Matrix(ah4)
+        ah44Blk = iScreen.clip(ah4top, ah4left, ah4top+ah4Blk.get_dy(), ah4left+ah4Blk.get_dx())
+        ah44Blk = ah44Blk+ah4Blk
+        oScreen.paste(ah44Blk, ah4top, ah4left)
                     
- def Bcheck(top, left, bcheck):
+def Bcheck(top, left, bcheck):
     if (bcheck ==1):
-                    bh1top = top
-                    bh1left = left
-                    bh1Blk= Matrix(bh1)
-                    bh11Blk = iScreen.clip(bh1top, bh1left, bh1top+bh1Blk.get_dy(), bh1left+bh1Blk.get_dx())
-                    bh11Blk = bh11Blk+bh1Blk
-                    oScreen.paste(bh11Blk, bh1top, bh1left)
-                elif (bcheck ==2):
-                    bh2top = top
-                    bh2left = left
-                    bh2Blk= Matrix(bh2)
-                    bh22Blk = iScreen.clip(bh2top, bh2left, bh2top+bh2Blk.get_dy(), bh2left+bh2Blk.get_dx())
-                    bh22Blk = bh22Blk+bh2Blk
-                    oScreen.paste(bh22Blk, bh2top, bh2left)
-                 elif (acheck ==3):
-                    bh3top = top
-                    bh3left = left
-                    bh3Blk= Matrix(bh3)
-                    bh33Blk = iScreen.clip(bh3top, bh3left, bh3top+bh3Blk.get_dy(), bh3left+bh3Blk.get_dx())
-                    bh33Blk = bh33Blk+bh3Blk
-                    oScreen.paste(bh33Blk, bh3top, bh3left)
-                 elif (acheck ==4):
-                    bh4top = top
-                    bh4left = left
-                    bh4Blk= Matrix(bh4)
-                    bh44Blk = iScreen.clip(bh4top, bh4left, bh4top+bh4Blk.get_dy(), bh4left+bh4Blk.get_dx())
-                    bh44Blk = bh44Blk+bh4Blk
-                    oScreen.paste(bh44Blk, bh4top, bh4left)
+        bh1top = top
+        bh1left = left
+        bh1Blk= Matrix(bh1)
+        bh11Blk = iScreen.clip(bh1top, bh1left, bh1top+bh1Blk.get_dy(), bh1left+bh1Blk.get_dx())
+        bh11Blk = bh11Blk+bh1Blk
+        oScreen.paste(bh11Blk, bh1top, bh1left)
+    elif (bcheck ==2):
+        bh2top = top
+        bh2left = left
+        bh2Blk= Matrix(bh2)
+        bh22Blk = iScreen.clip(bh2top, bh2left, bh2top+bh2Blk.get_dy(), bh2left+bh2Blk.get_dx())
+        bh22Blk = bh22Blk+bh2Blk
+        oScreen.paste(bh22Blk, bh2top, bh2left)
+    elif (acheck ==3):
+        bh3top = top
+        bh3left = left
+        bh3Blk= Matrix(bh3)
+        bh33Blk = iScreen.clip(bh3top, bh3left, bh3top+bh3Blk.get_dy(), bh3left+bh3Blk.get_dx())
+        bh33Blk = bh33Blk+bh3Blk
+        oScreen.paste(bh33Blk, bh3top, bh3left)
+    elif (acheck ==4):
+        bh4top = top
+        bh4left = left
+        bh4Blk= Matrix(bh4)
+        bh44Blk = iScreen.clip(bh4top, bh4left, bh4top+bh4Blk.get_dy(), bh4left+bh4Blk.get_dx())
+        bh44Blk = bh44Blk+bh4Blk
+        oScreen.paste(bh44Blk, bh4top, bh4left)
 
 def show_board(A1, B1, X, Y):
     board = origin_board()#깨끗한 놀이판
@@ -692,8 +692,7 @@ def show_board(A1, B1, X, Y):
         acheck += 1
         if i != [10,10] and i != [20,20]:
             if (i == [0,0]):
-                
-                top = 13
+                top =13
                 left = 1
                 Acheck(top, left, acheck)
                 
@@ -707,7 +706,7 @@ def show_board(A1, B1, X, Y):
                 left = 1
                 Acheck(top, left, acheck)
             elif (i == [0,6]):
-                arrayScreen1[7][1] = 1
+                
                 top = 7
                 left = 1
                 Acheck(top, left, acheck)
@@ -716,122 +715,122 @@ def show_board(A1, B1, X, Y):
                 left = 1
                 Acheck(top, left, acheck)
             elif (i == [0,10]):
-                arrayScreen1[3][1] = 1
+                
                 top = 3
                 left = 1
                 Acheck(top, left, acheck)
             elif (i == [1,1]):
-                arrayScreen1[12][2] = 1
+                
                 top = 12
                 left = 2
                 Acheck(top, left, acheck)
             elif (i == [1,9]):
-                arrayScreen1[4][2] = 1
+                
                 top = 4
                 left = 2
                 Acheck(top, left, acheck)
             elif (i == [2,0]):
-                arrayScreen1[13][3] = 1
+                
                 top = 13
                 left = 3
                 Acheck(top, left, acheck)
             elif (i == [2,10]):
-                arrayScreen1[3][3] = 1
+                
                 top = 3
                 left = 3
                 Acheck(top, left, acheck)
             elif (i == [3,3]):
-                arrayScreen1[10][4] = 1
+                
                 top = 10
                 left = 4
                 Acheck(top, left, acheck)
             elif (i == [3,7]):
-                arrayScreen1[6][4] = 1
+                
                 top = 6
                 left = 4
                 Acheck(top, left, acheck)
             elif (i == [4,0]):
-                arrayScreen1[13][5] = 1
+                
                 top = 13
                 left = 5
                 Acheck(top, left, acheck)
             elif (i == [4,10]):
-                arrayScreen1[3][5] = 1
+                
                 top = 3
                 left = 5
                 Acheck(top, left, acheck)
             elif (i == [5,5]):
-                arrayScreen1[8][6] = 1
+                
                 top = 8
                 left = 6
                 Acheck(top, left, acheck)
             elif (i == [6,0]):
-                arrayScreen1[13][7] = 1
+               
                 top = 13
                 left = 7
                 Acheck(top, left, acheck)
             elif (i == [6,10]):
-                arrayScreen1[3][7] = 1
+                
                 top = 3
                 left = 7
                 Acheck(top, left, acheck)
             elif (i == [7,3]):
-                arrayScreen1[10][8] = 1
+                
                 top = 10
                 left = 8
                 Acheck(top, left, acheck)
             elif (i == [7,7]):
-                arrayScreen1[6][8] = 1
+                
                 top = 6
                 left = 8
                 Acheck(top, left, acheck)
             elif (i == [8,0]):
-                arrayScreen1[13][9] = 1
-                top = 13
+                
+                top =13
                 left = 9
                 Acheck(top, left, acheck)
             elif (i == [8,10]):
-                arrayScreen1[3][9] = 1
+                
                 top = 3
                 left = 9
                 Acheck(top, left, acheck)
             elif (i == [9,1]):
-                arrayScreen1[12][10] = 1
+                
                 top = 12
                 left = 10
                 Acheck(top, left, acheck)
             elif (i == [9,9]):
-                arrayScreen1[4][10] = 1
+                
                 top = 4
                 left = 10
                 Acheck(top, left, acheck)
             elif (i == [10,0]):
-                arrayScreen1[13][11] = 1
+                
                 top = 13
                 left = 11
                 Acheck(top, left, acheck)
             elif (i == [10,2]):
-                arrayScreen1[11][11] = 1
+                
                 top = 11
                 left = 11
                 Acheck(top, left, acheck)
             elif (i == [10,4]):
-                arrayScreen1[9][11] = 1
+                
                 top = 9
                 left = 11
                 Acheck(top, left, acheck)
             elif (i == [10,6]):
-                arrayScreen1[7][11] = 1
+                
                 top = 7
                 left = 11
                 Acheck(top, left, acheck)
             elif (i == [10,8]):
-                arrayScreen1[5][11] = 1
+                
                 top = 5
                 left = 11
                 Acheck(top, left, acheck)
             elif (i == [10,10]):
-                arrayScreen1[3][11] = 1
+                
                 top = 3
                 left = 11
                 Acheck(top, left, acheck)
@@ -841,7 +840,7 @@ def show_board(A1, B1, X, Y):
     for i in B1:#B팀의 말 입력
         bcheck += 1
         if i != [10,10] and i != [20,20]:
-                      if (i == [0,0]):
+            if (i == [0,0]):
                 
                 top = 13
                 left = 1
