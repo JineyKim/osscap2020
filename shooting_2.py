@@ -25,12 +25,14 @@ def draw_matrix(m):
                 LMD.set_pixel(x,y,2)
             elif array[y][x] == 3:             #gun
                 LMD.set_pixel(x,y,3)
-            elif array[y][x] == 6:            #flight
+            elif array[y][x] == 6:            #flight1
                 LMD.set_pixel(x,y,4)
             elif array[y][x] == 7:             #obstacle
                 LMD.set_pixel(x,y,1)
             elif array[y][x] == 8:
                 LMD.set_pixel(x,y,1)        #block 부셨을 때 색바뀌는 이펙트 추가
+            elif array[y][x] == 9:
+                LMD.set_pixel(x,y,8)          #flight2
             else:
                 LMD.set_pixel(x,y,5)
 
@@ -61,8 +63,10 @@ def crash(m):
 # 스크린 크기와 비행체의 (top,left)좌표 정의
 iScreenDy = 16
 iScreenDx = 32
-flttop = 7
+flttop = 2
 fltleft = 27
+flt2top = 13
+flt2left = 27
 
 # iScreen이 될 기본 array (블록과 테두리 정의되어 있음)
 # iScreen=Matrix(ArrayScreen)을 선택하는 방향
@@ -144,7 +148,7 @@ gameoverScreen = [
     [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
 # 점수표시용 숫자 정의 (0 ~ 9)
 def timescore(t):
@@ -278,6 +282,9 @@ gunBlk = Matrix(gun)
 flight = [[0, 6, 6], [6, 6, 0], [0, 6, 6]]
 flightBlk = Matrix(flight)
 
+flight2 = [[9, 9, 0], [0, 9, 9], [9, 9, 0]]
+flight2Blk = Matrix(flight2)
+
 # 스크린 정의;
 # iScreen이 의미하는 것 = 블록 + 테두리
 iScreen = Matrix(ArrayScreen)
@@ -287,6 +294,10 @@ oScreen = Matrix(iScreen)
 flttempBlk = iScreen.clip(flttop, fltleft, flttop + flightBlk.get_dy(), fltleft + flightBlk.get_dx())
 flttempBlk = flttempBlk + flightBlk
 oScreen.paste(flttempBlk, flttop, fltleft)
+
+flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+flt2tempBlk = flt2tempBlk + flight2Blk
+oScreen.paste(flt2tempBlk, flt2top, flt2left)
 
 # 현재 화면 출력
 draw_matrix(oScreen);
@@ -322,6 +333,7 @@ while True:  # 무한루프 진행
 
     # shoot 변수 정의, finish 변수 정의
     shoot = False
+    shoot2 = False
     finish = False
 
     # key 입력을 pygame 통해서 받음
@@ -339,9 +351,17 @@ while True:  # 무한루프 진행
             if event.key == pg.K_LEFT:
                 if flttop != 12:
                     flttop += 1
-            elif event.key == pg.K_RIGHT:
+            if event.key == pg.K_RIGHT:
                 if flttop != 1:
                     flttop -= 1
+            if event.key == pg.K_S:
+                shoot2 = True
+            if event.key == pg.K_A:
+                if flt2top != 12:
+                    flt2top += 1
+            elif event.key == pg.K_D:
+                if flt2top != 1:
+                    flt2top -= 1
 
     # finish == true 일 때 무한 루프 종료
     if finish == True:
@@ -389,6 +409,36 @@ while True:  # 무한루프 진행
             oScreen=Matrix(iScreen)
             gameover = True
             break
+            
+    if obstacleleft == 27:
+        if flt2top <= obstacletop <= flt2top + 2:
+            flight2 = [[1, 1, 0], [0, 1, 1], [1, 1, 0]]
+            flight2Blk = Matrix(flight2)
+            flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+            flt2tempBlk = flt2tempBlk + flight2Blk
+            oScreen.paste(flt2tempBlk, flt2top, flt2left)
+            draw_matrix(oScreen);print()
+            time.sleep(0.1)
+            iScreen=Matrix(ArrayScreen)
+            oScreen=Matrix(iScreen)
+            flight2 = [[9, 9, 0], [0, 9, 9], [9, 9, 0]]
+            flight2Blk = Matrix(flight2)
+            flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+            flt2tempBlk = flt2tempBlk + flight2Blk
+            oScreen.paste(flt2tempBlk, flt2top, flt2left)
+            draw_matrix(oScreen);print()
+            time.sleep(0.1)
+            flight = [[1, 1, 0], [0, 1, 1], [1, 1, 0]]
+            flight2Blk = Matrix(flight2)
+            flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+            flt2tempBlk = flt2tempBlk + flight2Blk
+            oScreen.paste(flt2tempBlk, flt2top, flt2left)
+            draw_matrix(oScreen);print()
+            time.sleep(0.1)
+            iScreen=Matrix(ArrayScreen)
+            oScreen=Matrix(iScreen)
+            gameover = True
+            break    
 
     obstacleleft += 1
 
@@ -441,7 +491,51 @@ while True:  # 무한루프 진행
                     oScreen=Matrix(iScreen)
                     gameover = True
                     break
+                    
+    if shoot2 == True:
+        guntop = flt2top + 1
+        gunleft = flt2left - 1
 
+        obstacleSpeed = 0
+        while True:
+            oScreen = Matrix(iScreen)
+            oScreen.paste(flt2tempBlk, flt2top, flt2left)
+            oScreen.paste(obstacletempBlk, obstacletop, obstacleleft)
+            time.sleep(0.05)
+            guntempBlk = iScreen.clip(guntop, gunleft, guntop + gunBlk.get_dy(), gunleft + gunBlk.get_dx())
+            guntempBlk = guntempBlk + gunBlk
+            oScreen.paste(guntempBlk, guntop, gunleft)
+            gunleft -= 1
+
+            if obstacleleft == 27:
+                if flt2top <= obstacletop <= flt2top + 2:
+                    flight2 = [[1, 1, 0], [0, 1, 1], [1, 1, 0]]
+                    flight2Blk = Matrix(flight)
+                    flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+                    flt2tempBlk = flt2tempBlk + flight2Blk
+                    oScreen.paste(flt2tempBlk, flt2top, flt2left)
+                    draw_matrix(oScreen);print()
+                    time.sleep(0.1)
+                    iScreen=Matrix(ArrayScreen)
+                    oScreen=Matrix(iScreen)
+                    flight2 = [[9, 9, 0], [0, 9, 9], [9, 9, 0]]
+                    flight2Blk = Matrix(flight2)
+                    flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+                    flt2tempBlk = flt2tempBlk + flight2Blk
+                    oScreen.paste(flt2tempBlk, flt2top, flt2left)
+                    draw_matrix(oScreen);print()
+                    time.sleep(0.1)
+                    flight2 = [[1, 1, 0], [0, 1, 1], [1, 1, 0]]
+                    flight2Blk = Matrix(flight2)
+                    flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+                    flt2tempBlk = flt2tempBlk + flight2Blk
+                    oScreen.paste(flt2tempBlk, flt2top, flt2left)
+                    draw_matrix(oScreen);print()
+                    time.sleep(0.1)
+                    iScreen=Matrix(ArrayScreen)
+                    oScreen=Matrix(iScreen)
+                    gameover = True
+                    break
             #obstacle 블록객체가 너무 빠르게 움직이는 것을 방지
             #현재 whileloop의 timesleep값이 바깥의 값보다 4배 크기때문에 루프를 4번 돌때마다 1칸 움직이게 설정했음
             if obstacleSpeed==0:
@@ -469,6 +563,10 @@ while True:  # 무한루프 진행
     flttempBlk = iScreen.clip(flttop, fltleft, flttop + flightBlk.get_dy(), fltleft + flightBlk.get_dx())
     flttempBlk = flttempBlk + flightBlk
     oScreen.paste(flttempBlk, flttop, fltleft)
+    
+    flt2tempBlk = iScreen.clip(flt2top, flt2left, flt2top + flight2Blk.get_dy(), flt2left + flight2Blk.get_dx())
+    flt2tempBlk = flt2tempBlk + flight2Blk
+    oScreen.paste(flt2tempBlk, flt2top, flt2left)
 
     # time.sleep을 통해서 시간 간격 추가, drawmatrix로 출력
     t = 0.15
