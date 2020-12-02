@@ -534,9 +534,7 @@ if printtimescore == True:
         # timeiScreen에서 clip 따와서 붙혀넣기
         # timeoften != 0일때 실행
         if timeoften != 0:
-            timeoftentempBlk = timeiScreen.clip(timeoftentop, timeoftenleft, timeoftentop + timeoftenBlk.get_dy(),
-
-                                                timeoftenleft + timeoftenBlk.get_dx())
+            timeoftentempBlk = timeiScreen.clip(timeoftentop, timeoftenleft, timeoftentop + timeoftenBlk.get_dy(), timeoftenleft + timeoftenBlk.get_dx())
             timeoftentempBlk = timeoftentempBlk + timeoftenBlk
             timeoScreen.paste(timeoftentempBlk, timeoftentop, timeoftenleft)
 
