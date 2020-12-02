@@ -421,7 +421,7 @@ def drive(handle):
 ####                pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
 ####            elif matrix[i][j]==7:
 ####                pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
-            LMD.set_pixel(j,i, matrix[0][j])
+            LMD.set_pixel(j,i, matrix[i][j])
 
 
 matrix=[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
