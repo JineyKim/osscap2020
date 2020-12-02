@@ -2,6 +2,7 @@ from matrix_2 import *
 import LED_display as LMD
 import threading
 import random
+import time
 
 def LED_init():
     thread=threading.Thread(target=LMD.main, args=())
@@ -123,9 +124,9 @@ tempBlk = tempBlk + currBlk
 oScreen.paste(tempBlk, top, left)
 LED_init()
 draw_matrix(oScreen); print()
-
+start = int(time.time())
 aaa=(arrayBlk[abc])
-
+score = 0
 ###
 ### execute the loop
 ###
@@ -180,6 +181,7 @@ while True:
 
     if newBlockNeeded:
         oScrean = deleteFullLines(oScreen, currBlk, top, iScreenDy, iScreenDx, iScreenDw)
+        score += 1   
         iScreen = Matrix(oScreen)
         top = 0
         left = iScreenDw + iScreenDx//2 - 2
@@ -192,7 +194,11 @@ while True:
         if tempBlk.anyGreaterThan(1):
             print('Game Over!!!')
             break
-        
+        if score == 1:
+            end = int(time.time())
+            timespent = end - start
+            print('You spent %d time!!!'%timespent)
+            break
         oScreen = Matrix(iScreen)
         oScreen.paste(tempBlk, top, left)
         draw_matrix(oScreen); print()
