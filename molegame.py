@@ -322,11 +322,12 @@ while check:
     if (timec> checktime):
         endScreen = Matrix(endScreen)
         draw_matrix(endScreen); print()
-        time.sleep(1)
+        time.sleep(2)
         #screen.fill(black)
         #screen.blit(end_message, [200, 250])
         #pygame.display.update()
         check = False
+        break
 
 #pygame.time.delay(2000)
 #pygame.quit()
@@ -337,4 +338,5 @@ while check:
             #sys.exit()
     #screen.fill(black)
     #screen.blit(end_message, [200, 250])
-
+pygame.quit()
+quit()
