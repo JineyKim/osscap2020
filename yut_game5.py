@@ -703,262 +703,176 @@ def show_board(A1, B1, X, Y):
         acheck += 1
         if i != [10,10] and i != [20,20]:
             if (i == [0,0]):
-                ah1top =13
-                ah1left = 1
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top =13
+                left = 1
+                Acheck(top, left, acheck)
+                
             elif (i == [0,2]):
                 
-                ah1top = 11
-                ah1left = 1
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 11
+                left = 1
+                Acheck(top, left, acheck)
+                
             elif (i == [0,4]):
-                ah1top = 9
-                ah1left = 1
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 9
+                left = 1
+                Acheck(top, left, acheck)
+                
             elif (i == [0,6]):
                 
-                ah1top = 7
-                ah1left = 1
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 7
+                left = 1
+                Acheck(top, left, acheck)
+                
             elif (i == [0,8]):
-                ah1top = 5
-                ah1left = 1
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 5
+                left = 1
+                Acheck(top, left, acheck)
+                
             elif (i == [0,10]):
                 
-                ah1top = 3
-                ah1left = 1
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 3
+                left = 1
+                Acheck(top, left, acheck)
+                
             elif (i == [1,1]):
                 
-                ah1top = 12
-                ah1left = 2
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 12
+                left = 2
+                Acheck(top, left, acheck)
+                
             elif (i == [1,9]):
                 
-                ah1top = 4
-                ah1left = 2
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 4
+                left = 2
+                Acheck(top, left, acheck)
+                
             elif (i == [2,0]):
                 
-                ah1top = 13
-                ah1left = 3
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 13
+                left = 3
+                Acheck(top, left, acheck)
+                
             elif (i == [2,10]):
                 
-                ah1top = 3
-                ah1left = 3
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 3
+                left = 3
+                Acheck(top, left, acheck)
+                
             elif (i == [3,3]):
                 
-                ah1top = 10
-                ah1left = 4
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 10
+                left = 4
+                Acheck(top, left, acheck)
+                
             elif (i == [3,7]):
                 
-                ah1top = 6
-                ah1left = 4
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 6
+                left = 4
+                Acheck(top, left, acheck)
+                
             elif (i == [4,0]):
                 
-                ah1top = 13
-                ah1left = 5
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 13
+                left = 5
+                Acheck(top, left, acheck)
+                
             elif (i == [4,10]):
                 
-                ah1top = 3
-                ah1left = 5
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 3
+                left = 5
+                Acheck(top, left, acheck)
+                
             elif (i == [5,5]):
                 
-                ah1top = 8
-                ah1left = 6
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 8
+                left = 6
+                Acheck(top, left, acheck)
+                
             elif (i == [6,0]):
                
-                ah1top = 13
-                ah1left = 7
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 13
+                left = 7
+                Acheck(top, left, acheck)
+                
             elif (i == [6,10]):
                 
-                ah1top = 3
-                ah1left = 7
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 3
+                left = 7
+                Acheck(top, left, acheck)
+                
             elif (i == [7,3]):
                 
-                ah1top = 10
-                ah1left = 8
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 10
+                left = 8
+                Acheck(top, left, acheck)
+                
             elif (i == [7,7]):
                 
-                ah1top = 6
-                ah1left = 8
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 6
+                left = 8
+                Acheck(top, left, acheck)
+                
             elif (i == [8,0]):
                 
                 ah1top =13
                 ah1left = 9
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                Acheck(top, left, acheck)
+                
             elif (i == [8,10]):
                 
-                ah1top = 3
-                ah1left = 9
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 3
+                left = 9
+                Acheck(top, left, acheck)
+                
             elif (i == [9,1]):
                 
-                ah1top = 12
-                ah1left = 10
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 12
+                left = 10
+                Acheck(top, left, acheck)
+                
             elif (i == [9,9]):
                 
-                ah1top = 4
-                ah1left = 10
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 4
+                left = 10
+                Acheck(top, left, acheck)
+                
             elif (i == [10,0]):
                 
-                ah1top = 13
-                ah1left = 11
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 13
+                left = 11
+                Acheck(top, left, acheck)
+                
             elif (i == [10,2]):
                 
-                ah1top = 11
-                ah1left = 11
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 11
+                left = 11
+                Acheck(top, left, acheck)
+                
             elif (i == [10,4]):
                 
-                ah1top = 9
-                ah1left = 11
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 9
+                left = 11
+                Acheck(top, left, acheck)
+                
             elif (i == [10,6]):
                 
-                ah1top = 7
-                ah1left = 11
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 7
+                left = 11
+                Acheck(top, left, acheck)
+                
             elif (i == [10,8]):
                 
-                ah1top = 5
-                ah1left = 11
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 5
+                left = 11
+                Acheck(top, left, acheck)
+                
             elif (i == [10,10]):
-                ah1top = 3
-                ah1left = 11
-                #Acheck(top, left, acheck)
-                ah1Blk= Matrix(ah1)
-                ah11Blk = iScreen.clip(ah1top, ah1left, ah1top+ah1Blk.get_dy(), ah1left+ah1Blk.get_dx())
-                ah11Blk = ah11Blk+ah1Blk
-                oScreen.paste(ah11Blk, ah1top, ah1left)
+                top = 3
+                left = 11
+                Acheck(top, left, acheck)
+                
+        
             board[i[0]][i[1]] = X[mum]
         elif i == [10,10] and i == [20,20]:
             top = 14
@@ -1173,7 +1087,7 @@ def mal_E_up_seong(X):
     else:
         return False
 LED_init()
-
+def main():
     print("Contradiction 윷놀이에 오신 것을 환영합니다!")
     usernameA, passwdA, triesA, winsA = 'A', 'A', 0,0
     usernameB, passwdB, triesB, winsB = 'B','B',0,0
@@ -1184,8 +1098,8 @@ LED_init()
     B1 = [[10, 10], [10, 10], [10, 10], [10, 10]]
     n, k = [],[]
     while True:
-          iScreen = Matrix(arrayboard)
-          oScreen = Matrix(iScreen)
+          #iScreen = Matrix(arrayboard)
+          #oScreen = Matrix(iScreen)
           ter = ater
           aBlk = Matrix(ter)
           aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
@@ -1335,6 +1249,6 @@ LED_init()
                     return print("B팀의 승리입니다!")
            
 
-
+main()
 # throw()
 # show_board()
