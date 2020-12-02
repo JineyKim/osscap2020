@@ -403,25 +403,25 @@ def drive(handle):
 ####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,410],10)
         LMD.set_pixel(j,10, matrix[10][j+tk-8])
 ##        
-    for i in range(11,22):
-        for j in range(8,24):
-####            if matrix[i][j]==0:
-####                pygame.draw.circle(screen,BLACK,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==1:
-####                pygame.draw.circle(screen,RED  ,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==2:
-####                pygame.draw.circle(screen,GREEN,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==3:
-####                pygame.draw.circle(screen,YELLO,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==4:
-####                pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==5:
-####                pygame.draw.circle(screen,PINK ,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==6:
-####                pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
-####            elif matrix[i][j]==7:
-####                pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
-            LMD.set_pixel(j,i, matrix[i][j])
+##    for i in range(11,22):
+##        for j in range(8,24):
+######            if matrix[i][j]==0:
+######                pygame.draw.circle(screen,BLACK,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==1:
+######                pygame.draw.circle(screen,RED  ,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==2:
+######                pygame.draw.circle(screen,GREEN,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==3:
+######                pygame.draw.circle(screen,YELLO,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==4:
+######                pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==5:
+######                pygame.draw.circle(screen,PINK ,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==6:
+######                pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
+######            elif matrix[i][j]==7:
+######                pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
+##            LMD.set_pixel(j,i, matrix[i][j])
 
 
 matrix=[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
