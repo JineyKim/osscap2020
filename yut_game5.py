@@ -652,11 +652,40 @@ def Acheck(top, left, acheck):
                     ah44Blk = iScreen.clip(ah4top, ah4left, ah4top+ah4Blk.get_dy(), ah4left+ah4Blk.get_dx())
                     ah44Blk = ah44Blk+ah4Blk
                     oScreen.paste(ah44Blk, ah4top, ah4left)
+                    
+ def Bcheck(top, left, bcheck):
+    if (bcheck ==1):
+                    bh1top = top
+                    bh1left = left
+                    bh1Blk= Matrix(bh1)
+                    bh11Blk = iScreen.clip(bh1top, bh1left, bh1top+bh1Blk.get_dy(), bh1left+bh1Blk.get_dx())
+                    bh11Blk = bh11Blk+bh1Blk
+                    oScreen.paste(bh11Blk, bh1top, bh1left)
+                elif (bcheck ==2):
+                    bh2top = top
+                    bh2left = left
+                    bh2Blk= Matrix(bh2)
+                    bh22Blk = iScreen.clip(bh2top, bh2left, bh2top+bh2Blk.get_dy(), bh2left+bh2Blk.get_dx())
+                    bh22Blk = bh22Blk+bh2Blk
+                    oScreen.paste(bh22Blk, bh2top, bh2left)
+                 elif (acheck ==3):
+                    bh3top = top
+                    bh3left = left
+                    bh3Blk= Matrix(bh3)
+                    bh33Blk = iScreen.clip(bh3top, bh3left, bh3top+bh3Blk.get_dy(), bh3left+bh3Blk.get_dx())
+                    bh33Blk = bh33Blk+bh3Blk
+                    oScreen.paste(bh33Blk, bh3top, bh3left)
+                 elif (acheck ==4):
+                    bh4top = top
+                    bh4left = left
+                    bh4Blk= Matrix(bh4)
+                    bh44Blk = iScreen.clip(bh4top, bh4left, bh4top+bh4Blk.get_dy(), bh4left+bh4Blk.get_dx())
+                    bh44Blk = bh44Blk+bh4Blk
+                    oScreen.paste(bh44Blk, bh4top, bh4left)
 
 def show_board(A1, B1, X, Y):
     board = origin_board()#깨끗한 놀이판
     mum = 0
-    arrayScreen1 = list(arrayboard)
     acheck = 0
     bcheck = 0
     for i in A1:#A팀의 말 입력
@@ -810,69 +839,154 @@ def show_board(A1, B1, X, Y):
         mum += 1
     mum = 0
     for i in B1:#B팀의 말 입력
+        bcheck += 1
         if i != [10,10] and i != [20,20]:
-            if (i == [0,0]):
-                arrayScreen1[13][1] = 4
+                      if (i == [0,0]):
+                
+                top = 13
+                left = 1
+                Bcheck(top, left, bcheck)
+                
             elif (i == [0,2]):
-                arrayScreen1[11][1] = 4
+                
+                top = 11
+                left = 1
+                Bcheck(top, left, bcheck)
             elif (i == [0,4]):
-                arrayScreen1[9][1] = 4
+                top = 9
+                left = 1
+                Bcheck(top, left, bcheck)
             elif (i == [0,6]):
-                arrayScreen1[7][1] = 4
+                
+                top = 7
+                left = 1
+                Bcheck(top, left, bcheck)
             elif (i == [0,8]):
-                arrayScreen1[5][1] = 4
+                top = 5
+                left = 1
+                Bcheck(top, left, bcheck)
             elif (i == [0,10]):
-                arrayScreen1[3][1] = 4
+                
+                top = 3
+                left = 1
+                Bcheck(top, left, bcheck)
             elif (i == [1,1]):
-                arrayScreen1[12][2] = 4
+                
+                top = 12
+                left = 2
+                Bcheck(top, left, bcheck)
             elif (i == [1,9]):
-                arrayScreen1[4][2] = 4
+                
+                top = 4
+                left = 2
+                Bcheck(top, left, bcheck)
             elif (i == [2,0]):
-                arrayScreen1[13][3] = 4
+                
+                top = 13
+                left = 3
+                Bcheck(top, left, bcheck)
             elif (i == [2,10]):
-                arrayScreen1[3][3] = 4
+                
+                top = 3
+                left = 3
+                Bcheck(top, left, bcheck)
             elif (i == [3,3]):
-                arrayScreen1[10][4] = 4
+                
+                top = 10
+                left = 4
+                Bcheck(top, left, bcheck)
             elif (i == [3,7]):
-                arrayScreen1[6][4] = 4
+                
+                top = 6
+                left = 4
+                Bcheck(top, left, bcheck)
             elif (i == [4,0]):
-                arrayScreen1[13][5] = 4
+                
+                top = 13
+                left = 5
+                Bcheck(top, left, bcheck)
             elif (i == [4,10]):
-                arrayScreen1[3][5] = 4
+                
+                top = 3
+                left = 5
+                Bcheck(top, left, bcheck)
             elif (i == [5,5]):
-                arrayScreen1[8][6] = 4
+                
+                top = 8
+                left = 6
+                Bcheck(top, left, bcheck)
             elif (i == [6,0]):
-                arrayScreen1[13][7] = 4
+                
+                top = 13
+                left = 7
+                Bcheck(top, left, bcheck)
             elif (i == [6,10]):
-                arrayScreen1[3][7] = 4
+                
+                top = 3
+                left = 7
+                Bcheck(top, left, bcheck)
             elif (i == [7,3]):
-                arrayScreen1[10][8] = 4
+                
+                top = 10
+                left = 8
+                Bcheck(top, left, bcheck)
             elif (i == [7,7]):
-                arrayScreen1[6][8] = 4
+                
+                top = 6
+                left = 8
+                Bcheck(top, left, bcheck)
             elif (i == [8,0]):
-                arrayScreen1[13][9] = 4
+                
+                top = 13
+                left = 9
+                Bcheck(top, left, bcheck)
             elif (i == [8,10]):
-                arrayScreen1[3][9] = 4
+                
+                top = 3
+                left = 9
+                Bcheck(top, left, bcheck)
             elif (i == [9,1]):
-                arrayScreen1[12][10] = 4
+                
+                top = 12
+                left = 10
+                Bcheck(top, left, bcheck)
             elif (i == [9,9]):
-                arrayScreen1[4][10] = 4
+                
+                top = 4
+                left = 10
+                Bcheck(top, left, bcheck)
             elif (i == [10,0]):
-                arrayScreen1[13][11] = 4
+                
+                top = 13
+                left = 11
+                Bcheck(top, left, bcheck)
             elif (i == [10,2]):
-                arrayScreen1[11][11] = 4
+                
+                top = 11
+                left = 11
+                Bcheck(top, left, bcheck)
             elif (i == [10,4]):
-                arrayScreen1[9][11] = 4
+                
+                top = 9
+                left = 11
+                Bcheck(top, left, bcheck)
             elif (i == [10,6]):
-                arrayScreen1[7][11] = 4
+                
+                top = 7
+                left = 11
+                Bcheck(top, left, bcheck)
             elif (i == [10,8]):
-                arrayScreen1[5][11] = 4
+               
+                top = 5
+                left = 11
+                Bcheck(top, left, bcheck)
             elif (i == [10,10]):
-                arrayScreen1[3][11] = 4
+                
+                top = 3
+                left = 11
+                Bcheck(top, left, bcheck)
             board[i[0]][i[1]] = Y[mum]
         mum += 1
-    iScreen = Matrix(arrayScreen1)
-    oScreen = Matrix(iScreen)
     drawmatrix(oScreen); print()
     for row in board:
         for x in range(11):
