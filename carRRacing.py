@@ -1,8 +1,100 @@
 import pygame
 import sys
 from pygame.locals import *
+import RPi.GPIO as GPIO
+import time
 
 #r36 r32 r26 r21 r15 r8 r3
+
+
+delay = 0.000001
+
+GPIO.setmode(GPIO.BCM)
+red1_pin = 11
+green1_pin = 27
+blue1_pin = 7
+red2_pin = 8
+green2_pin = 9
+blue2_pin = 10
+clock_pin = 17
+a_pin = 22
+b_pin = 23
+c_pin = 24
+latch_pin = 4
+oe_pin = 18
+
+GPIO.setup(red1_pin, GPIO.OUT)
+GPIO.setup(green1_pin, GPIO.OUT)
+GPIO.setup(blue1_pin, GPIO.OUT)
+GPIO.setup(red2_pin, GPIO.OUT)
+GPIO.setup(green2_pin, GPIO.OUT)
+GPIO.setup(blue2_pin, GPIO.OUT)
+GPIO.setup(clock_pin, GPIO.OUT)
+GPIO.setup(a_pin, GPIO.OUT)
+GPIO.setup(b_pin, GPIO.OUT)
+GPIO.setup(c_pin, GPIO.OUT)
+GPIO.setup(latch_pin, GPIO.OUT)
+GPIO.setup(oe_pin, GPIO.OUT)
+
+screen = [[0 for x in xrange(32)] for x in xrange(16)]
+
+def clock():
+    GPIO.output(clock_pin, 1)
+    GPIO.output(clock_pin, 0)
+
+def latch():
+    GPIO.output(latch_pin, 1)
+    GPIO.output(latch_pin, 0)
+
+def bits_from_int(x):
+    a_bit = x & 1
+    b_bit = x & 2
+    c_bit = x & 4
+    return (a_bit, b_bit, c_bit)
+
+def set_row(row):
+    #time.sleep(delay)
+    a_bit, b_bit, c_bit = bits_from_int(row)
+    GPIO.output(a_pin, a_bit)
+    GPIO.output(b_pin, b_bit)
+    GPIO.output(c_pin, c_bit)
+    #time.sleep(delay)
+
+def set_color_top(color):
+    #time.sleep(delay)
+    red, green, blue = bits_from_int(color)
+    GPIO.output(red1_pin, red)
+    GPIO.output(green1_pin, green)
+    GPIO.output(blue1_pin, blue)
+    #time.sleep(delay)
+
+def set_color_bottom(color):
+    #time.sleep(delay)
+    red, green, blue = bits_from_int(color)
+    GPIO.output(red2_pin, red)
+    GPIO.output(green2_pin, green)
+    GPIO.output(blue2_pin, blue)
+    #time.sleep(delay)
+
+def refresh():
+    for row in range(8):
+        GPIO.output(oe_pin, 1)
+        set_color_top(0)
+        set_row(row)
+        #time.sleep(delay)
+        for col in range(32):
+            set_color_top(screen[row][col])
+            set_color_bottom(screen[row+8][col])
+            clock()
+        #GPIO.output(oe_pin, 0)
+        latch()
+        GPIO.output(oe_pin, 0)
+        time.sleep(delay)
+
+
+def set_pixel(x, y, color):
+    screen[y][x] = color
+    refresh()
 
 def drive(handle):
     print(handle)
@@ -193,6 +285,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,210],10)
         elif matrix[0][j+ta-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,210],10)
+        set_pixel(j, 0, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[1][j+tb-8]==0:
@@ -211,6 +304,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,230],10)
         elif matrix[1][j+tb-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,230],10)
+        set_pixel(j, 1, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[2][j+tc-8]==0:
@@ -229,6 +323,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,250],10)
         elif matrix[2][j+tc-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,250],10)
+        set_pixel(j, 2, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[3][j+td-8]==0:
@@ -247,6 +342,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,270],10)
         elif matrix[3][j+td-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,270],10)
+        set_pixel(j, 3, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[4][j+te-8]==0:
@@ -265,6 +361,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,290],10)
         elif matrix[4][j+te-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,290],10)
+        set_pixel(j, 4, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[5][j+tf-8]==0:
@@ -283,6 +380,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,310],10)
         elif matrix[5][j+tf-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,310],10)
+        set_pixel(j, 5, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[6][j+tg-8]==0:
@@ -301,6 +399,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,330],10)
         elif matrix[6][j+tg-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,330],10)
+        set_pixel(j, 6, matrix[0][j+ta-8]):
             
     for j in range(8,24):
         if matrix[7][j+th-8]==0:
@@ -319,6 +418,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,350],10)
         elif matrix[7][j+th-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,350],10)
+        set_pixel(j, 7, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[8][j+ti-8]==0:
@@ -337,6 +437,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,370],10)
         elif matrix[8][j+ti-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,370],10)
+        set_pixel(j, 8, matrix[0][j+ta-8]):
 
     for j in range(8,24):
         if matrix[9][j+tj-8]==0:
@@ -355,6 +456,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,390],10)
         elif matrix[9][j+tj-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,390],10)
+        set_pixel(j, 9, matrix[0][j+ta-8]):
             
     for j in range(8,24):
         if matrix[11][j+tk-8]==0:
@@ -373,6 +475,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,410],10)
         elif matrix[11][j+tk-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,410],10)
+        set_pixel(j, 10, matrix[0][j+ta-8]):
         
     for i in range(11,22):
         for j in range(8,24):
@@ -392,7 +495,8 @@ def drive(handle):
                 pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
             elif matrix[i][j]==7:
                 pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
-    
+            set_pixel(j, i, matrix[0][j+ta-8]):
+
 
 matrix=[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
         [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
