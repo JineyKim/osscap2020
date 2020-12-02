@@ -19,9 +19,9 @@ def draw_matrix(m):
                 # print("■", end='')
                 LMD.set_pixel(y, 19-x, 4)
             else:
-                # print("XX", end='')
-                # continue
-        print()
+                print("XX", end='')
+                continue
+      print()
 
 def deleteFullLines(s,b,top,dy,dx,dw):
     if b == None :
