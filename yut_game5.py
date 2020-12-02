@@ -225,8 +225,8 @@ turleft = 15
 #led그리
 def drawmatrix(m):
     array = m.get_array()
-    for x in range(32):
-        for y in range(16): #m.get_dx()
+    for y in range(32):
+        for x in range(16): #m.get_dx()
             
             if array[x][y] == 0:
                 LMD.set_pixel(y, x, 0)
