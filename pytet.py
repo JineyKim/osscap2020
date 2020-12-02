@@ -194,7 +194,7 @@ while True:
         if tempBlk.anyGreaterThan(1):
             print('Game Over!!!')
             break
-        if score == 10:
+        if score == 1:
             end = int(time.time())
             timespent = end - start
             print('You spent %d time!!!'%timespent)
