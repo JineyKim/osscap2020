@@ -474,9 +474,10 @@ clock = pygame.time.Clock()
 
 while True:
     for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
+        if event.type==pygame.KEYDOWN:
+            if event.key==pygame.K_q:
+                pygame.quit()
+                sys.exit()
 
     screen.fill(BLACK)
 
@@ -510,7 +511,7 @@ while True:
     if handle==13 or handle==1:
         screen.fill(WHITE)
         print("Game Over")
-        pygame.quit()
+##        pygame.quit()
         break
     
     pygame.display.update()
