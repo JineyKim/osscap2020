@@ -12,32 +12,29 @@ def LED_init():
     thread.start()
     return
 
-# Matrix m의 (y,x) 값에 따른 출력부
 def draw_matrix(m):
     array = m.get_array()
     for y in range(m.get_dy()):
         for x in range(m.get_dx()):
             if array[y][x] == 0:
                 LMD.set_pixel(x,y,0)
-            elif array[y][x] == 1:             #wall
+            elif array[y][x] == 1: #벽
                 LMD.set_pixel(x,y,1)
-            elif array[y][x] == 2:          #block
+            elif array[y][x] == 2: #표적
                 LMD.set_pixel(x,y,2)
-            elif array[y][x] == 3:             #gun
+            elif array[y][x] == 3: #총
                 LMD.set_pixel(x,y,3)
-            elif array[y][x] == 6:            #flight
+            elif array[y][x] == 6: #비행기
                 LMD.set_pixel(x,y,4)
-            elif array[y][x] == 7:             #obstacle
+            elif array[y][x] == 7: #운석
                 LMD.set_pixel(x,y,5)
             elif array[y][x] == 8:
-                LMD.set_pixel(x,y,6)        #block 부셨을 때 색바뀌는 이펙트 추가
+                LMD.set_pixel(x,y,6) #표적을 부셨을 때 색바뀌는 이펙트
             else:
                 LMD.set_pixel(x,y,7)
 
         print()
 
-
-# 충돌여부 파악하는 함수 구현
 a_y = 0
 a_x = 0
 def crash(m):
@@ -58,19 +55,12 @@ def crash(m):
                 return True
     return False
 
-# 스크린 크기와 비행체의 (top,left)좌표 정의
 iScreenDy = 16
 iScreenDx = 32
 flttop = 7
 fltleft = 27
 
-# iScreen이 될 기본 array (블록과 테두리 정의되어 있음)
-# iScreen=Matrix(ArrayScreen)을 선택하는 방향
-# 키 입력을 통해 총 발사하고 걸리는 시간을 스코어 형식으로 표현
-
-#level 값을 input 받음
 level = 1
-# 게임중 스페이스바 입력을 위한 pygame모듈 사용
 screen = pg.display.set_mode((1, 1))
 
 ArrayScreen =[
@@ -92,17 +82,15 @@ ArrayScreen =[
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ]
 
-#input받은 level값에 따른 맵 구현
 blocklist1 = []
 
-randomrange1=random.randint(6,11)        #  생성 블록 개수를 의미
+randomrange1=random.randint(6,11) # 랜덤생성 블록 개수
 
 
 for i in range(randomrange1):
-    blockrandom1 = random.randint(2, 13)  # randint는 블록의 top좌표를 의미하게 됨
+    blockrandom1 = random.randint(2, 13) # 블록의 top좌표를 의미
     blocklist1.append(blockrandom1)
 
-#easy (level == 1)
 for i in range(len(blocklist1)):
     ArrayScreen[blocklist1[i]][5]=2
 
@@ -126,7 +114,6 @@ emptyScreen = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ]
 
-# gameover표시용 matrix 정의
 # gameover표시용 matrix 정의
 gameoverScreen = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -272,20 +259,20 @@ def timescore(t):
 LED_init()
 
 
-# 총(gun) 행렬 정의
+# 총 모양 정의
 gun = [[3]]
 gunBlk = Matrix(gun)
 
-# 비행체 모양 정의
+# 비행기 모양 정의
 flight = [[0, 6, 6], [6, 6, 0], [0, 6, 6]]
 flightBlk = Matrix(flight)
 
 # 스크린 정의;
-# iScreen이 의미하는 것 = 블록 + 테두리
+# iScreen = 블록 + 테두리
 iScreen = Matrix(ArrayScreen)
 oScreen = Matrix(iScreen)
 
-# 비행체 oScreen에 붙여넣기
+# 비행기 oScreen에 붙여넣기
 flttempBlk = iScreen.clip(flttop, fltleft, flttop + flightBlk.get_dy(), fltleft + flightBlk.get_dx())
 flttempBlk = flttempBlk + flightBlk
 oScreen.paste(flttempBlk, flttop, fltleft)
