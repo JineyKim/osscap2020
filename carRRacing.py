@@ -269,232 +269,232 @@ def drive(handle):
     
     
     for j in range(8,24):
-##        if matrix[0][j+ta-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,210],10)
-##        elif matrix[0][j+ta-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,210],10)
+####        if matrix[0][j+ta-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,210],10)
+####        elif matrix[0][j+ta-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,210],10)
         set_pixel(j, 0, matrix[0][j+ta-8])
-
+##
     for j in range(8,24):
-##        if matrix[1][j+tb-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,230],10)
-##        elif matrix[1][j+tb-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,230],10)
+####        if matrix[1][j+tb-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,230],10)
+####        elif matrix[1][j+tb-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,230],10)
         set_pixel(j, 1, matrix[0][j+tb-8])
-
+##
     for j in range(8,24):
-##        if matrix[2][j+tc-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,250],10)
-##        elif matrix[2][j+tc-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,250],10)
+####        if matrix[2][j+tc-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,250],10)
+####        elif matrix[2][j+tc-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,250],10)
         set_pixel(j, 2, matrix[0][j+tc-8])
-
+##
     for j in range(8,24):
-##        if matrix[3][j+td-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,270],10)
-##        elif matrix[3][j+td-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,270],10)
+####        if matrix[3][j+td-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,270],10)
+####        elif matrix[3][j+td-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,270],10)
         set_pixel(j, 3, matrix[0][j+td-8])
-
+##
     for j in range(8,24):
-##        if matrix[4][j+te-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,290],10)
-##        elif matrix[4][j+te-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,290],10)
+####        if matrix[4][j+te-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,290],10)
+####        elif matrix[4][j+te-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,290],10)
         set_pixel(j, 4, matrix[0][j+te-8])
-
+##
     for j in range(8,24):
-##        if matrix[5][j+tf-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,310],10)
-##        elif matrix[5][j+tf-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,310],10)
+####        if matrix[5][j+tf-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,310],10)
+####        elif matrix[5][j+tf-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,310],10)
         set_pixel(j, 5, matrix[0][j+tf-8])
-
+##
     for j in range(8,24):
-##        if matrix[6][j+tg-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,330],10)
-##        elif matrix[6][j+tg-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,330],10)
+####        if matrix[6][j+tg-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,330],10)
+####        elif matrix[6][j+tg-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,330],10)
         set_pixel(j, 6, matrix[0][j+tg-8])
-            
+##            
     for j in range(8,24):
-##        if matrix[7][j+th-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,350],10)
-##        elif matrix[7][j+th-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,350],10)
+####        if matrix[7][j+th-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,350],10)
+####        elif matrix[7][j+th-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,350],10)
         set_pixel(j, 7, matrix[0][j+th-8])
-
+##
     for j in range(8,24):
-##        if matrix[8][j+ti-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,370],10)
-##        elif matrix[8][j+ti-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,370],10)
+####        if matrix[8][j+ti-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,370],10)
+####        elif matrix[8][j+ti-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,370],10)
         set_pixel(j, 8, matrix[0][j+ti-8])
-
+##
     for j in range(8,24):
-##        if matrix[9][j+tj-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,390],10)
-##        elif matrix[9][j+tj-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,390],10)
+####        if matrix[9][j+tj-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,390],10)
+####        elif matrix[9][j+tj-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,390],10)
         set_pixel(j, 9, matrix[0][j+tj-8])
-            
+##            
     for j in range(8,24):
-##        if matrix[11][j+tk-8]==0:
-##            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==1:
-##            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==2:
-##            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==3:
-##            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==4:
-##            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==5:
-##            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==6:
-##            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,410],10)
-##        elif matrix[11][j+tk-8]==7:
-##            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,410],10)
+####        if matrix[11][j+tk-8]==0:
+####            pygame.draw.circle(screen,BLACK,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==1:
+####            pygame.draw.circle(screen,RED  ,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==2:
+####            pygame.draw.circle(screen,GREEN,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==3:
+####            pygame.draw.circle(screen,YELLO,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==4:
+####            pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==5:
+####            pygame.draw.circle(screen,PINK ,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==6:
+####            pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,410],10)
+####        elif matrix[11][j+tk-8]==7:
+####            pygame.draw.circle(screen,WHITE,[(j-8)*20+10,410],10)
         set_pixel(j, 10, matrix[0][j+tk-8])
-        
+##        
     for i in range(11,22):
-        for j in range(8,24):
-##            if matrix[i][j]==0:
-##                pygame.draw.circle(screen,BLACK,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==1:
-##                pygame.draw.circle(screen,RED  ,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==2:
-##                pygame.draw.circle(screen,GREEN,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==3:
-##                pygame.draw.circle(screen,YELLO,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==4:
-##                pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==5:
-##                pygame.draw.circle(screen,PINK ,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==6:
-##                pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
-##            elif matrix[i][j]==7:
-##                pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
+##        for j in range(8,24):
+####            if matrix[i][j]==0:
+####                pygame.draw.circle(screen,BLACK,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==1:
+####                pygame.draw.circle(screen,RED  ,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==2:
+####                pygame.draw.circle(screen,GREEN,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==3:
+####                pygame.draw.circle(screen,YELLO,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==4:
+####                pygame.draw.circle(screen,BLUE ,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==5:
+####                pygame.draw.circle(screen,PINK ,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==6:
+####                pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
+####            elif matrix[i][j]==7:
+####                pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
             set_pixel(j, i, matrix[0][j])
 
 
@@ -555,7 +555,7 @@ while True:
             pygame.quit()
             sys.exit()
 
-##    screen.fill(BLACK)
+    screen.fill(BLACK)
 
     if roadMap[tt//5]>handle:
         if handle<14:
@@ -590,5 +590,5 @@ while True:
         pygame.quit()
         break
     
-##    pygame.display.update()
+    pygame.display.update()
     clock.tick(15)
