@@ -16,19 +16,19 @@ def draw_matrix(m):
     array = m.get_array()
     for y in range(m.get_dy()):
         for x in range(m.get_dx()):
-            if array[32-y][16-x] == 0:
+            if array[31-y][15-x] == 0:
                 LMD.set_pixel(x,y,0)
-            elif array[32-y][16-x] == 1:             #wall
+            elif array[31-y][15-x] == 1:             #wall
                 LMD.set_pixel(x,y,2)
-            elif array[32-y][16-x] == 2:          #block
+            elif array[31-y][15-x] == 2:          #block
                 LMD.set_pixel(x,y,3)
-            elif array[32-y][16-x] == 3:             #gun
+            elif array[31-y][15-x] == 3:             #gun
                 LMD.set_pixel(x,y,4)
-            elif array[32-y][16-x] == 6:            #flight
+            elif array[31-y][15-x] == 6:            #flight
                 LMD.set_pixel(x,y,5)
-            elif array[32-y][16-x] == 7:             #obstacle
+            elif array[31-y][15-x] == 7:             #obstacle
                 LMD.set_pixel(x,y,1)
-            elif array[32-y][16-x] == 8:
+            elif array[31-y][15-x] == 8:
                 LMD.set_pixel(x,y,1)
             else:
                 LMD.set_pixel(x,y,5)
