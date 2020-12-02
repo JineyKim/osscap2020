@@ -14,8 +14,8 @@ def LED_init():
 
 def draw_matrix(m):
     array = m.get_array()
-    for x in range(m.get_dy()):
-        for y in range(m.get_dx()):
+    for x in range(m.get_dx()):
+        for y in range(m.get_dy()):
             if array[y][x] == 0:
                 LMD.set_pixel(x,y,0)
             elif array[y][x] == 1:             #wall
@@ -41,8 +41,8 @@ def crash(m):
     global a_y
     global a_x
     array = m.get_array()
-    for x in range(m.get_dy()):
-        for y in range(m.get_dx()):
+    for x in range(m.get_dx()):
+        for y in range(m.get_dy()):
             if array[y][x] == 4:
                 array[y][x] = 1
                 a_y = y
@@ -506,8 +506,8 @@ while True:  # 무한루프 진행
             else:
                 draw_matrix(oScreen)
 
-    if ArrayScreen[a_y][a_x] == 2:
-        ArrayScreen[a_y][a_x] = 8
+    if ArrayScreen[a_x][a_y] == 2:
+        ArrayScreen[a_x][a_y] = 8
 
     # 바뀐 flttop을 바탕으로 oscreen에 붙여넣기
     flttempBlk = iScreen.clip(flttop, fltleft, flttop + flightBlk.get_dy(), fltleft + flightBlk.get_dx())
@@ -523,8 +523,8 @@ while True:  # 무한루프 진행
     # ArrayScreen전체에서 2가 없으면 게임 종료 ( 시간에 따른 스코어 출력)
     count = 0
     # 모든 ArrayScreen의 배열값 돌면서 블록(2)가 남아있다면 count값 증가
-    for y in range(iScreenDy):
-        for x in range(iScreenDx):
+    for x in range(iScreenDx):
+        for y in range(iScreenDy):
             if ArrayScreen[y][x] == 2:
                 count += 1
 
