@@ -527,7 +527,7 @@ roadMap=[8,8,7,7,6,6,5,5,4,4,3,3,2,2,
          12,12,11,11,10,10,9,9,8,8]
 tt=0
 
-pygame.init()
+##pygame.init()
 
 BLACK= (  0,  0,  0)    #0
 RED  = (255,  0,  0)    #1
@@ -541,9 +541,9 @@ WHITE= (255,255,255)    #7
 
  
 size  = [320,640]
-screen= pygame.display.set_mode(size)
+##screen= pygame.display.set_mode(size)
   
-pygame.display.set_caption("Jiney Racing 2020")
+##pygame.display.set_caption("Jiney Racing 2020")
   
 done= False
 handle=8
@@ -590,5 +590,5 @@ while True:
         pygame.quit()
         break
     
-    pygame.display.update()
+##    pygame.display.update()
     clock.tick(15)
