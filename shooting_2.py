@@ -20,7 +20,7 @@ def draw_matrix(m):
             if array[y][x] == 0:
                 LMD.set_pixel(x,y,0)
             elif array[y][x] == 1:             #wall
-                LMD.set_pixel(x,y,7)
+                LMD.set_pixel(x,y,1)
             elif array[y][x] == 2:          #block
                 LMD.set_pixel(x,y,2)
             elif array[y][x] == 3:             #gun
@@ -28,11 +28,11 @@ def draw_matrix(m):
             elif array[y][x] == 6:            #flight
                 LMD.set_pixel(x,y,4)
             elif array[y][x] == 7:             #obstacle
-                LMD.set_pixel(x,y,1)
-            elif array[y][x] == 8:
-                LMD.set_pixel(x,y,1)        #block 부셨을 때 색바뀌는 이펙트 추가
-            else:
                 LMD.set_pixel(x,y,5)
+            elif array[y][x] == 8:
+                LMD.set_pixel(x,y,6)        #block 부셨을 때 색바뀌는 이펙트 추가
+            else:
+                LMD.set_pixel(x,y,7)
 
         print()
 
