@@ -65,7 +65,7 @@ iScreenDy = 16
 iScreenDx = 32
 flttop = 2
 fltleft = 27
-flt2top = 13
+flt2top = 12
 flt2left = 27
 
 # iScreen이 될 기본 array (블록과 테두리 정의되어 있음)
@@ -354,12 +354,12 @@ while True:  # 무한루프 진행
             if event.key == pg.K_RIGHT:
                 if flttop != 1:
                     flttop -= 1
-            if event.key == pg.K_S:
+            if event.key == pg.K_s:
                 shoot2 = True
-            if event.key == pg.K_A:
+            if event.key == pg.K_a:
                 if flt2top != 12:
                     flt2top += 1
-            elif event.key == pg.K_D:
+            elif event.key == pg.K_d:
                 if flt2top != 1:
                     flt2top -= 1
 
