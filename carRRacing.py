@@ -304,7 +304,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,230],10)
         elif matrix[1][j+tb-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,230],10)
-        set_pixel(j, 1, matrix[0][j+ta-8])
+        set_pixel(j, 1, matrix[0][j+tb-8])
 
     for j in range(8,24):
         if matrix[2][j+tc-8]==0:
@@ -323,7 +323,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,250],10)
         elif matrix[2][j+tc-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,250],10)
-        set_pixel(j, 2, matrix[0][j+ta-8])
+        set_pixel(j, 2, matrix[0][j+tc-8])
 
     for j in range(8,24):
         if matrix[3][j+td-8]==0:
@@ -342,7 +342,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,270],10)
         elif matrix[3][j+td-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,270],10)
-        set_pixel(j, 3, matrix[0][j+ta-8])
+        set_pixel(j, 3, matrix[0][j+td-8])
 
     for j in range(8,24):
         if matrix[4][j+te-8]==0:
@@ -361,7 +361,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,290],10)
         elif matrix[4][j+te-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,290],10)
-        set_pixel(j, 4, matrix[0][j+ta-8])
+        set_pixel(j, 4, matrix[0][j+te-8])
 
     for j in range(8,24):
         if matrix[5][j+tf-8]==0:
@@ -380,7 +380,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,310],10)
         elif matrix[5][j+tf-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,310],10)
-        set_pixel(j, 5, matrix[0][j+ta-8])
+        set_pixel(j, 5, matrix[0][j+tf-8])
 
     for j in range(8,24):
         if matrix[6][j+tg-8]==0:
@@ -399,7 +399,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,330],10)
         elif matrix[6][j+tg-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,330],10)
-        set_pixel(j, 6, matrix[0][j+ta-8])
+        set_pixel(j, 6, matrix[0][j+tg-8])
             
     for j in range(8,24):
         if matrix[7][j+th-8]==0:
@@ -418,7 +418,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,350],10)
         elif matrix[7][j+th-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,350],10)
-        set_pixel(j, 7, matrix[0][j+ta-8])
+        set_pixel(j, 7, matrix[0][j+th-8])
 
     for j in range(8,24):
         if matrix[8][j+ti-8]==0:
@@ -437,7 +437,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,370],10)
         elif matrix[8][j+ti-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,370],10)
-        set_pixel(j, 8, matrix[0][j+ta-8])
+        set_pixel(j, 8, matrix[0][j+ti-8])
 
     for j in range(8,24):
         if matrix[9][j+tj-8]==0:
@@ -456,7 +456,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,390],10)
         elif matrix[9][j+tj-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,390],10)
-        set_pixel(j, 9, matrix[0][j+ta-8])
+        set_pixel(j, 9, matrix[0][j+tj-8])
             
     for j in range(8,24):
         if matrix[11][j+tk-8]==0:
@@ -475,7 +475,7 @@ def drive(handle):
             pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,410],10)
         elif matrix[11][j+tk-8]==7:
             pygame.draw.circle(screen,WHITE,[(j-8)*20+10,410],10)
-        set_pixel(j, 10, matrix[0][j+ta-8])
+        set_pixel(j, 10, matrix[0][j+tk-8])
         
     for i in range(11,22):
         for j in range(8,24):
@@ -495,7 +495,7 @@ def drive(handle):
                 pygame.draw.circle(screen,CYAN ,[(j-8)*20+10,(i+11)*20-10],10)
             elif matrix[i][j]==7:
                 pygame.draw.circle(screen,WHITE,[(j-8)*20+10,(i+11)*20-10],10)
-            set_pixel(j, i, matrix[0][j+ta-8])
+            set_pixel(j, i, matrix[0][j])
 
 
 matrix=[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
@@ -522,7 +522,9 @@ matrix=[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
         [8,8,8,8,8,8,8,8,0,0,0,0,0,0,7,7,7,7,0,0,0,0,0,0,8,8,8,8,8,8,8,8],]
 
 roadMap=[8,8,7,7,6,6,5,5,4,4,3,3,2,2,
-         2,2,3,3,4,4,5,5,6,6,7,7,8,8]
+         2,2,3,3,4,4,5,5,6,6,7,7,8,8,
+         8,8,9,9,10,10,11,11,12,12,
+         12,12,11,11,10,10,9,9,8,8]
 tt=0
 
 pygame.init()
@@ -580,7 +582,7 @@ while True:
                 
     drive(handle)
     tt+=1
-    if tt>135:
+    if tt>185:
         tt=0
     if handle==13 or handle==1:
         screen.fill(WHITE)
