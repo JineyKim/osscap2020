@@ -511,7 +511,7 @@ while True:
     if handle==13 or handle==1:
         for i in range(32):
             for j in range(16):
-                LMD.set_pixel(j,i,1)
+                LMD.set_pixel(i,j,1)
         print("Game Over")
 ##        pygame.quit()
         break
