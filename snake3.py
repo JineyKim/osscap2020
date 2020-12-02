@@ -45,7 +45,9 @@ def Your_score(score):
 def our_snake(snake_block, snake_list):
     for x in snake_list:
         pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
-        LMD.set_pixel(int(x[1]/10),15-int(x[0]/10),1)
+        if int(x[1]/10)>=0 and int(x[1]/10)<32:
+            if int(x[0]/10)>=0 and int(x[0]/10)<16:
+                LMD.set_pixel(int(x[1]/10),15-int(x[0]/10),6)
         print(x[0],end=' ')
         print(x[1])
  
@@ -78,7 +80,7 @@ def gameLoop():
  
         while game_close == True:
             dis.fill(blue)
-            message("You Lost! Press C-Play Again or Q-Quit", red)
+            message("C-Play Again or Q-Quit", red)
             Your_score(Length_of_snake - 1)
             pygame.display.update()
  
