@@ -584,7 +584,7 @@ def show_board(A1, B1, X, Y):
     mum = 0
     iScreen = Matrix(arrayboard)
     oScreen = Matrix(iScreen)
-    arrayScreen1 = list(arrayScreen)
+    arrayScreen1 = list(arrayboard)
     for i in A1:#A팀의 말 입력
         if i != [10,10] and i != [20,20]:
             if (i == [0,0]):
@@ -817,7 +817,7 @@ def main_game():
                     endScreen = Matrix(endgameA)
                     draw_matrix(endScreen); print()
                     return print("A팀의 승리입니다!")
-          ter = ater
+          ter = bter
           aBlk = Matrix(ter)
           aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
           aattBlk = aattBlk+aBlk
