@@ -21,7 +21,7 @@ def draw_matrix(m):
             else:
                 print("XX", end='')
                 continue
-      print()
+        print()
 
 def deleteFullLines(s,b,top,dy,dx,dw):
     if b == None :
