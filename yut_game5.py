@@ -775,13 +775,24 @@ def main_game():
                    break
                 if len(n)>1:#윷을 여러번 던졌을 때
                    print(n)
-                   z = input("어느 것으로 먼저 움직이시겠습니까?")
-                   while not ((z == "도") or (z == "개") or (z == "걸") or (z == "윷") or (z == "모") or (z == "빽도")):
+                   z = input("어느 것으로 먼저 움직이시겠습니까? A는 도 B는 개 C는 걸 D는 윷 E는 모 F는 빽도")
+                   while not ((z == "A") or (z == "B") or (z == "C") or (z == "D") or (z == "E") or (z == "F")):
                          if z not in n:#한글이 맞지만 뽑은 것이 아닐 경우
                             z = input("제대로 선택해 주십시오.")
                          else:#뭣도 아닐 경우
                              z = input("제대로 선택해 주십시오")
                          if (z == "A"):
+                            z = "도"
+                         elif (z == "B"):
+                            z = "개"
+                         elif (z == "C"):
+                            z = "걸"
+                         elif (z == "D"):
+                            z = "윷"
+                         elif (z == "E"):
+                            z = "모"
+                         elif (z == "F"):
+                            z = "빽도"
                             
                             
                 else:#한번만 뽑았을 때
@@ -836,12 +847,24 @@ def main_game():
                    break
                 if len(n)>1:
                    print(n)
-                   z = input("어느 것으로 먼저 움직이시겠습니까?")
-                   while not ((z == "도") or (z == "개") or (z == "걸") or (z == "윷") or (z == "모") or (z == "빽도")):
+                   z = input("어느 것으로 먼저 움직이시겠습니까? A는 도 B는 개 C는 걸 D는 윷 E는 모 F는 빽도")
+                   while not ((z == "A") or (z == "B") or (z == "C") or (z == "D") or (z == "E") or (z == "F")):
                          if z not in n:
                             z = input("제대로 선택해 주십시오.")
                          else:
                              z = input("제대로 선택해 주십시오")
+                         if (z == "A"):
+                            z = "도"
+                         elif (z == "B"):
+                            z = "개"
+                         elif (z == "C"):
+                            z = "걸"
+                         elif (z == "D"):
+                            z = "윷"
+                         elif (z == "E"):
+                            z = "모"
+                         elif (z == "F"):
+                            z = "빽도"
                 else:
                     z = n[0]
                 mum = where1("몇번 말을 움직이시겠습니까?")
