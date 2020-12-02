@@ -582,7 +582,7 @@ def origin_board():#깨끗한 놀이판, show_board에서만 사용한다.
 def show_board(A1, B1, X, Y):
     board = origin_board()#깨끗한 놀이판
     mum = 0
-    iScreen = Matrix(arrayScreen)
+    iScreen = Matrix(arrayboard)
     oScreen = Matrix(iScreen)
     arrayScreen1 = list(arrayScreen)
     for i in A1:#A팀의 말 입력
