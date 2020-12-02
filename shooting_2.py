@@ -608,6 +608,6 @@ if gameover == True:
     gameoScreen=Matrix(gameScreen)
     draw_matrix(gameoScreen);print()
     time.sleep(1)
-   overoScreen=Matrix(overScreen)
+    overoScreen=Matrix(overScreen)
     draw_matrix(overoScreen);print()
     time.sleep(2)
