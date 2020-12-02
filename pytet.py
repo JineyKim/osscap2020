@@ -26,6 +26,7 @@ def draw_matrix(m):
         print()
 
 def deleteFullLines(s,b,top,dy,dx,dw):
+    global score
     if b == None :
         return s
     nDeleted = 0
@@ -40,6 +41,7 @@ def deleteFullLines(s,b,top,dy,dx,dw):
             temp = s.clip(0,0,cy,s.get_dx())
             s.paste(temp,1,0)
             s.paste(zero,0,dw)
+            score += 1
             nDeleted = nDeleted +1
     return s
 
@@ -180,8 +182,7 @@ while True:
     draw_matrix(oScreen); print()
 
     if newBlockNeeded:
-        oScrean = deleteFullLines(oScreen, currBlk, top, iScreenDy, iScreenDx, iScreenDw)
-        score += 1   
+        oScrean = deleteFullLines(oScreen, currBlk, top, iScreenDy, iScreenDx, iScreenDw)   
         iScreen = Matrix(oScreen)
         top = 0
         left = iScreenDw + iScreenDx//2 - 2
