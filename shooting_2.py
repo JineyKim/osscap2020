@@ -69,7 +69,7 @@ fltleft = 27
 # 키 입력을 통해 총 발사하고 걸리는 시간을 스코어 형식으로 표현
 
 #level 값을 input 받음
-level = 1
+#level = 1
 # 게임중 스페이스바 입력을 위한 pygame모듈 사용
 screen = pg.display.set_mode((1, 1))
 
@@ -268,10 +268,7 @@ def timescore(t):
             [0, 0, 0, 0, 0, 0, 0, 0, 0]]
     return timeBlk
 
-#LED 패널 출력을 위한 thread 시작
-
 LED_init()
-
 
 # 총(gun) 행렬 정의
 gun = [[3]]
