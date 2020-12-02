@@ -26,6 +26,7 @@ def draw_matrix(m):
         print()
 
 def deleteFullLines(s,b,top,dy,dx,dw):
+    global score
     if b == None :
         return s
     nDeleted = 0
@@ -40,7 +41,7 @@ def deleteFullLines(s,b,top,dy,dx,dw):
             temp = s.clip(0,0,cy,s.get_dx())
             s.paste(temp,1,0)
             s.paste(zero,0,dw)
-            global score += 1
+            score += 1
             nDeleted = nDeleted +1
     return s
 
