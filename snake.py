@@ -46,7 +46,7 @@ snake_speed = 10
 def our_snake(snake_block, snake_list):
     for x in snake_list:
 ##        pygame.draw.rect(dis, black, [x[0], x[1], snake_block, snake_block])
-        LMD.set_pixel(x[0]/10,x[1]/10,6)
+        LMD.set_pixel(x[0]//10,x[1]//10,6)
  
  
 def gameLoop():
