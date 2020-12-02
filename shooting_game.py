@@ -14,24 +14,22 @@ def LED_init():
 
 def draw_matrix(m):
     array = m.get_array()
-    for y in range(m.get_dy()):
-        for x in range(m.get_dx()):
-            if array[31-y][15-x] == 0:
-                LMD.set_pixel(15-x,31-y,0)
-            elif array[31-y][15-x] == 1:             #wall
-                LMD.set_pixel(15-x,31-y,2)
-            elif array[31-y][15-x] == 2:          #block
-                LMD.set_pixel(15-x,31-y,3)
-            elif array[31-y][15-x] == 3:             #gun
-                LMD.set_pixel(15-x,31-y,4)
-            elif array[31-y][15-x] == 6:            #flight
-                LMD.set_pixel(15-x,31-y,5)
-            elif array[31-y][15-x] == 7:             #obstacle
-                LMD.set_pixel(15-x,31-y,1)
-            elif array[31-y][15-x] == 8:
-                LMD.set_pixel(15-x,31-y,1)
+    for x in range(m.get_dy()):
+        for y in range(m.get_dx()):
+            if array[y][x] == 0:
+                LMD.set_pixel(x,y,0)
+            elif array[y][x] == 1:             #wall
+                LMD.set_pixel(x,y,2)
+            elif array[y][x] == 2:          #block
+                LMD.set_pixel(x,y,3)
+            elif array[y][x] == 3:             #gun
+                LMD.set_pixel(x,y,4)
+            elif array[y][x] == 6:            #flight
+                LMD.set_pixel(x,y,5)
+            elif array[y][x] == 7:             #obstacle
+                LMD.set_pixel(x,y,1)
             else:
-                LMD.set_pixel(15-x,31-y,5)
+                LMD.set_pixel(x,y,5)
 
         print()
 
@@ -43,15 +41,15 @@ def crash(m):
     global a_y
     global a_x
     array = m.get_array()
-    for y in range(m.get_dy()):
-        for x in range(m.get_dx()):
-            if array[31-y][15-x] == 4:
-                array[31-y][15-x] = 1
+    for x in range(m.get_dy()):
+        for y in range(m.get_dx()):
+            if array[y][x] == 4:
+                array[y][x] = 1
                 a_y = y
                 a_x = x
                 return True
-            elif array[31-y][15-x] == 5:
-                array[31-y][15-x] = 0
+            elif array[y][x] == 5:
+                array[y][x] = 0
                 a_y = y
                 a_x = x
                 return True
@@ -111,7 +109,7 @@ blocklist1 = []
 randomrange1=random.randint(6,11)        #  생성 블록 개수를 의미
 
 for i in range(randomrange1):
-    blockrandom1 = random.randint(2, 27)  # randint는 블록의 top좌표를 의미하게 됨
+    blockrandom1 = random.randint(2, 13)  # randint는 블록의 top좌표를 의미하게 됨
     blocklist1.append(blockrandom1)
 
 #easy (level == 1)
@@ -341,8 +339,8 @@ print()
 # 장애물 행렬 정의
 obstacle = [[7]]
 obstacleBlk = Matrix(obstacle)
-obstacletop = 6  # 장애물의 생성 top좌표는 랜덤으로 변함
-obstacleleft = 1  # 장애물의 생성 left좌표는 항상 고정 (상수)
+obstacletop = 1  # 장애물의 생성 top좌표는 랜덤으로 변함
+obstacleleft = 6  # 장애물의 생성 left좌표는 항상 고정 (상수)
 
 #randomnumber을 담는 리스트 정의 (list의 배열값이 1과 14사이일때만 장애물 생성해서 출력
 lst=[]
