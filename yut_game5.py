@@ -582,8 +582,6 @@ def origin_board():#깨끗한 놀이판, show_board에서만 사용한다.
 def show_board(A1, B1, X, Y):
     board = origin_board()#깨끗한 놀이판
     mum = 0
-    iScreen = Matrix(arrayboard)
-    oScreen = Matrix(iScreen)
     arrayScreen1 = list(arrayboard)
     for i in A1:#A팀의 말 입력
         if i != [10,10] and i != [20,20]:
@@ -717,6 +715,7 @@ def show_board(A1, B1, X, Y):
         for x in range(11):
             print(row[x], end='')
         print()
+    
 
 def same_pos_A(mum,A1,B1):
     for i in range(4):
@@ -757,7 +756,7 @@ def main_game():
     B1 = [[10, 10], [10, 10], [10, 10], [10, 10]]
     n, k = [],[]
     while True:
-          LMD.set_pixel(1, 1, 3)
+    
           ter = ater
           aBlk = Matrix(ter)
           aattBlk = iScreen.clip(atop, aleft, atop+aBlk.get_dy(), aleft+aBlk.get_dx())
@@ -782,6 +781,9 @@ def main_game():
                             z = input("제대로 선택해 주십시오.")
                          else:#뭣도 아닐 경우
                              z = input("제대로 선택해 주십시오")
+                         if (z == "A"):
+                            
+                            
                 else:#한번만 뽑았을 때
                     z = n[0]
                 mum = where1("몇번 말을 움직이시겠습니까?")
