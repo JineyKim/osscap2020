@@ -555,7 +555,7 @@ while True:
             pygame.quit()
             sys.exit()
 
-    screen.fill(BLACK)
+##    screen.fill(BLACK)
 
     if roadMap[tt//5]>handle:
         if handle<14:
@@ -590,5 +590,5 @@ while True:
         pygame.quit()
         break
     
-    pygame.display.update()
+##    pygame.display.update()
     clock.tick(15)
