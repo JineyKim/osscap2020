@@ -5,8 +5,6 @@ import sys
 import random
 import LED_display as LMD
 import threading
-import googlestt as st
-
 
 def LED_init():
     thread=threading.Thread(target=LMD.main, args=())
@@ -73,9 +71,8 @@ fltleft = 27
 #level 값을 input 받음
 level = 0
 while True:
-    Word = st.main()
     print("Choose the level (Easy,Medium,Hard) :")
-    
+    Word = input()
     if Word == 'easy':
       level = 1
       break
