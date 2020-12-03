@@ -965,7 +965,7 @@ def show_board(A1, B1, X, Y):
             elif (i == [6,10]):
                 
                 top = 3
-                left = 71
+                left = 7
                 Bcheck(top, left, bcheck)
             elif (i == [7,3]):
                 
