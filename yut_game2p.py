@@ -700,7 +700,10 @@ def show_board(A1, B1, X, Y):
     iScreen = Matrix(arrayScreen)
     oScreen = Matrix(iScreen)
     mum = 0
+    acheck = 0
+    bcheck = 0
     for i in A1:#A팀의 말 입력
+        acheck += 1
         if i != [10,10] and i != [20,20]:
             if (i == [0,0]):
                 top =13
@@ -876,6 +879,7 @@ def show_board(A1, B1, X, Y):
         mum += 1
     mum = 0
     for i in B1:#B팀의 말 입력
+        bcheck += 1
         if i != [10,10] and i != [20,20]:
             if (i == [0,0]):
                 
